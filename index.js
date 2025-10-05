@@ -11,7 +11,7 @@ const mistralClient = new mistral.Mistral({
 });
 
 app.use(cors({
-  origin: "http://localhost:5173/"
+  origin: "https://what-if-it-hits.vercel.app/"
 }));
 
 app.get("/getStyle", async (_, result) => {

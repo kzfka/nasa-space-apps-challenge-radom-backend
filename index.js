@@ -39,7 +39,7 @@ app.get("/askAI", async (request, result) => {
     messages: [
       {
         role: "user",
-        content: `A meteor has struct our Earth at latitude = ${latitude}, longitude = ${longitude} and its radius is ${craterRadiusMeters} meter(s)! Tell me about the exact outcomes of such situation. But, I want you to be brief about it and please do not use markdown styling, e.g.: **bolden text**. I also want you to distinct between: 98.2km and 98,200km, where the first one means 98 kilometers and 200 meters, and the second one means 98 thousand and 200 kilometers.`
+        content: `A meteor has struct our Earth at latitude = ${latitude}, longitude = ${longitude} and its radius is ${craterRadiusMeters} meter(s)! Tell me about the exact outcomes of such situation. But, I want you to be brief about it and please do not use markdown styling, e.g.: **bolden text**. I also want you to distinct between  (and these values are not supposed to be interpreted as actual, real values i give you to analyze, following are just for you to learn but not use in your response): 98.2km and 98,200km, where the first one means 98 kilometers and 200 meters, and the second one means 98 thousand and 200 kilometers.`
       }
     ]
   });
@@ -56,7 +56,7 @@ app.get("/aiQuickConclusion", async (request, result) => {
     messages: [
       {
         role: "user",
-        content: `Can you please conclude the following informations into a really, really brief overview, 2 sentences tops. I also do not want you to use markdown styling, e.g.: **bold text**. I also want you to distinct between: 98.2km and 98,200km, where the first one means 98 kilometers and 200 meters, and the second one means 98 thousand and 200 kilometers. The message to conclude: ${wholeMessage}`
+        content: `Can you please conclude the following informations into a really, really brief overview, 2 sentences tops. I also do not want you to use markdown styling, e.g.: **bold text**. I also want you to distinct between (and these values are not supposed to be interpreted as actual, real values i give you to analyze, following are just for you to learn but not use in your response): 98.2km and 98,200km, where the first one means 98 kilometers and 200 meters, and the second one means 98 thousand and 200 kilometers. The message to conclude: ${wholeMessage}`
       }
     ]
   });

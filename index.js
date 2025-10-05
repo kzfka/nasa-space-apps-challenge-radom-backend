@@ -16,8 +16,6 @@ app.use(cors({
   credentials: true
 }));
 
-app.options("*", cors());
-
 app.get("/getStyle", async (_, result) => {
   const apiKey = process.env.MAP_TILER_API_KEY;
   const style = await fetch(`https://api.maptiler.com/maps/openstreetmap/style.json?key=${apiKey}`);

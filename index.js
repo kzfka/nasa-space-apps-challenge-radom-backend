@@ -11,8 +11,12 @@ const mistralClient = new mistral.Mistral({
 });
 
 app.use(cors({
-  origin: "https://what-if-it-hits.vercel.app/"
+  origin: "https://what-if-it-hits.vercel.app/",
+  methods: ["GET", "POST", "OPTIONS"],
+  credentials: true
 }));
+
+app.options("*", cors());
 
 app.get("/getStyle", async (_, result) => {
   const apiKey = process.env.MAP_TILER_API_KEY;

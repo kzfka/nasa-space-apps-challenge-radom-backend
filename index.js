@@ -3,7 +3,7 @@ cors = require("cors");
 dotenv = require("dotenv");
 mistral = require("@mistralai/mistralai");
 
-dotenv.config();
+//dotenv.config();
 
 const app = express();
 const mistralClient = new mistral.Mistral({
